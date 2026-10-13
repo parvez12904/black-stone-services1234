@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #090D16;
+  --color-dark-secondary: #101522;
+  --color-charcoal-surface: #151A25;
+  --color-champagne-gold: #A98536;
+  --color-gold-light: #D4C5A3;
+  --color-gold-bright: #C7A24C;
+  --color-warm-ivory: #F7F4ED;
+  --color-ivory-text: #20232A;
+  --color-ivory-muted: #626873;
+  --color-ivory-border: #E7E0D2;
+  --color-ivory-card: #FFFFFF;
+  --font-serif: 'DM Serif Display', 'Playfair Display', Georgia, serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #090D16;
+  color: #F4F0E6;
+  font-family: 'Manrope', system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090D16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C2333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A98536;
+}
+
+/* Typography Classes */
+.font-serif {
+  font-family: 'DM Serif Display', 'Playfair Display', Georgia, serif;
+}
+
+.font-display {
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+/* Fine Grid Pattern for Cinematic Dark Hero */
+.hero-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(169, 133, 54, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(169, 133, 54, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Soft Cinematic Champagne-Gold Glow */
+.gold-glow-radial {
+  background: radial-gradient(circle at 50% 45%, rgba(169, 133, 54, 0.16) 0%, rgba(169, 133, 54, 0.04) 45%, transparent 70%);
+}
+
+.gold-glow-contact {
+  background: radial-gradient(circle at 50% 50%, rgba(169, 133, 54, 0.14) 0%, transparent 65%);
+}
+
+/* Text Gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F4F0E6 0%, #D4C5A3 40%, #A98536 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-accent {
+  background: linear-gradient(135deg, #E6D5B0 0%, #C7A24C 50%, #A98536 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Interactive Buttons */
+.btn-gold {
+  background: linear-gradient(135deg, #C7A24C 0%, #A98536 100%);
+  color: #090D16;
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  letter-spacing: 0.02em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(169, 133, 54, 0.25);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #D4C5A3 0%, #B79445 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(169, 133, 54, 0.4);
+}
+
+.btn-outline-gold {
+  border: 1px solid rgba(169, 133, 54, 0.5);
+  color: #F4F0E6;
+  font-weight: 500;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+  background-color: rgba(16, 21, 34, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline-gold:hover {
+  border-color: #C7A24C;
+  background-color: rgba(169, 133, 54, 0.12);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Light / Warm Ivory Section Button */
+.btn-ivory-dark {
+  background-color: #20232A;
+  color: #F7F4ED;
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.btn-ivory-dark:hover {
+  background-color: #A98536;
+  color: #090D16;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(169, 133, 54, 0.25);
+}
+
+/* Card Styles */
+.card-dark-refined {
+  background-color: #101522;
+  border: 1px solid rgba(169, 133, 54, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-dark-refined:hover {
+  border-color: rgba(169, 133, 54, 0.45);
+  background-color: #151A25;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.6), 0 0 20px -4px rgba(169, 133, 54, 0.1);
+}
+
+.card-ivory-clean {
+  background-color: #FFFFFF;
+  border: 1px solid #E7E0D2;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-ivory-clean:hover {
+  border-color: #A98536;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -10px rgba(32, 35, 42, 0.08);
+}
